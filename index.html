@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imgs/chemestry.png">
+    <title>Química | Trabalho</title>
+</head>
+
+<body>
+    <div class="tabela">
+
+        <div class="tabela--tabela">
+
+            <div class="tabela-elemento">
+
+                <div class="tabela-nome color">Hidrogênio</div>
+                <div class="tabela-info">
+                    <div class="elemento">
+                        <img class="exemplo" src="./imgs/hydrogen.jpg" alt="" srcset="">
+                    </div>
+                    <div class="info">
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-item-item">Símbolo</div>
+                                <div class="info-item-item tabela-simbolo">H</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-item-item">Número atômico</div>
+                                <div class="info-item-item tabela-numero">1</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-item-item">Massa atômica</div>
+                                <div class="info-item-item tabela-massa">1.008</div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div class="linha" data-row="1"> </div>
+            <div class="linha" data-row="2"></div>
+            <div class="linha" data-row="3"></div>
+            <div class="linha" data-row="4"></div>
+            <div class="linha" data-row="5"></div>
+            <div class="linha" data-row="6"></div>
+            <div class="linha" data-row="7"></div>
+            <div class="lant-act">
+                <div class="linha" data-row="1">
+                    <span class="ast">*</span>
+                </div>
+                <div class="linha" data-row="2">
+                    <span class="ast">**</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="legenda">
+            <div class="legenda-item"><span style="background-color: #87A330;" class="square"></span>Não metais</div>
+            <div class="legenda-item"><span style="background-color: #545775;" class="square"></span>Gases nobres</div>
+            <div class="legenda-item"><span style="background-color: #FFA552;" class="square"></span>Metais alcalinos
+            </div>
+            <div class="legenda-item"><span style="background-color: #E7E247;" class="square"></span>Metais
+                alcalino-terrosos</div>
+            <div class="legenda-item"><span style="background-color: #587792;" class="square"></span>Semimetais</div>
+            <div class="legenda-item"><span style="background-color: #8DB1AB;" class="square"></span>Halogênios</div>
+            <div class="legenda-item"><span style="background-color: #247BA0;" class="square"></span>Outros metais</div>
+            <div class="legenda-item"><span style="background-color: #EA9E8D;" class="square"></span>Metais de transição
+            </div>
+            <div class="legenda-item"><span style="background-color: #8E518D;" class="square"></span>Lantanídeos</div>
+            <div class="legenda-item"><span style="background-color: #C86FC9;" class="square"></span>Actnídeos</div>
+        </div>
+
+
+    </div>
+
+
+    <div class="input">
+        <label class="numero-atomico" for=""><strong>Insira o número de elétrons ou o símbolo do
+                elemento</strong></label>
+        <input type="text" class="numero-atomico">
+        <div class="button"><strong>Enviar</strong></div>
+    </div>
+    <table>
+        <tr>
+            <th>Distribuição eletrônica</th>
+            <th>Camada de valência</th>
+            <th>Nº elétrons na camada de valência</th>
+            <th>Subnível mais energético</th>
+            <th>Nº de elétrons no subnível mais energético</th>
+        </tr>
+
+        <tr>
+            <td class="distribuicao"></td>
+            <td class="valencia"></td>
+            <td class="n-valencia"></td>
+            <td class="subnivel"></td>
+            <td class="n-subnivel"></td>
+        </tr>
+
+        
+    </table>
+    <footer>
+            <div class="inspiracao"><p>Tabela inspirada em <a href="https://www.todamateria.com.br/tabela-periodica/">   Toda Matéria</a></p></div>
+            <div class="inspiracao"><a href="https://www.todamateria.com.br/tabela-periodica/">Repositório no git</a></div>
+    </footer>
+    <script src="script.js" async></script>
+</body>
+
+</html>

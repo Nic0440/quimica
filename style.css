@@ -1,0 +1,355 @@
+body {
+    background: #F0E68C;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    cursor: url(./imgs/cursor.png), auto;
+    user-select: none;
+}
+
+.tabela {
+    gap: 15px;
+    margin-bottom: 138px
+}
+
+.tabela--tabela:not(.hdn) {
+    cursor: url(./imgs/pointer.png), pointer;
+}
+
+.tabela,
+.lant-act {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ast {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 14pt;
+}
+
+.celula *,
+.celula {
+    cursor: url(./imgs/pointer.png), pointer;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    cursor: url(./imgs/pointer.png), pointer;
+    display: block;
+    border: 2px solid black;
+}
+
+.legenda,
+.legenda-item {
+    display: flex;
+}
+
+.legenda {
+    flex-direction: column;
+    gap: 15px;
+    right: 0;
+}
+
+.legenda-item {
+    gap: 5px;
+    width: fit-content;
+    cursor: url(./imgs/pointer.png), pointer;
+    align-items: center;
+}
+
+.lant-act {
+    flex-direction: column;
+    padding-top: 20px;
+    position: absolute;
+}
+
+.inspiracao a {
+    cursor: url(./imgs/pointer.png), pointer;
+}
+
+.inspiracao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela--tabela {
+    position: relative;
+}
+
+.linha {
+    display: flex;
+    gap: 2px;
+    padding-bottom: 2px;
+}
+
+.celula {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.celula {
+    outline: 2px solid black;
+}
+
+.celula:not(.group):hover {
+    transform: scale(1.1);
+}
+
+.atomic-number {
+    font-size: 8pt;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.group {
+    cursor: url(./imgs/cursor.png), auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.simbolo {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18pt;
+    font-family: monospace;
+}
+
+label.numero-atomico {
+    width: 100%;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 8px auto 8px auto;
+}
+
+input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.button {
+    background: aquamarine;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.button *,
+.button {
+    cursor: url(./imgs/pointer.png), pointer;
+}
+
+.info {
+    height: 100%;
+    font-size: 10pt;
+    flex: 2;
+}
+
+.info-item {
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.info-item:nth-child(2),
+.info-item:first-child {
+    border-bottom: 1px solid gray;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.info-item-item {
+    align-self: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background-color: #F2F2F2;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.info-item:before {
+    content: "";
+    position: absolute;
+    background-color: gray;
+    border: 0;
+    margin: auto;
+    width: 1px;
+    inset: 0;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.exemplo {
+    flex: 1;
+    height: 115px;
+    width: 115px;
+}
+
+.elemento {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    position: relative;
+    font-family: monospace;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.elemento-simbolo {
+    font-size: 45pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    flex: 1;
+}
+
+.elemento-numero {
+    position: absolute;
+    font-size: 15pt;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0 auto auto 0;
+}
+
+.elemento-nome {
+    font-size: 12pt;
+    text-align: center;
+}
+
+.tabela-elemento {
+    position: absolute;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    inset: 0 315px 213px 107px;
+}
+
+.legenda-item:not(span):hover {
+    color: blue;
+}
+
+.tabela-nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22pt;
+    font-weight: bolder;
+    font-family: monospace;
+    background-color: #87A330;
+}
+
+.tabela-info {
+    display: flex;
+    flex: 1;
+}
+
+input.numero-atomico {
+    font-family: monospace;
+    font-size: 12pt;
+    background: bisque;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+tbody {
+    background-color: black;
+}
+
+td,
+th {
+    border: 1px solid #F2F2F2;
+    padding: 5px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+td:first-child {
+    font-weight: bolder;
+}
+
+.orbitais {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+}
+
+/*Cor dos elementos*/
+.semi {
+    background-color: #587792;
+}
+
+.nao {
+    background-color: #87A330;
+}
+
+.outros {
+    background-color: #247BA0;
+}
+
+.halogenios {
+    background-color: #8DB1AB;
+}
+
+.lant {
+    background-color: #8E518D;
+}
+
+.act {
+    background-color: #C86FC9;
+}
+
+.alcalinos {
+    background-color: #FFA552;
+}
+
+.terrosos {
+    background-color: #E7E247;
+}
+
+.gases {
+    background-color: #545775;
+}
+
+.transicao {
+    background-color: #EA9E8D;
+}
