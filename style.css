@@ -172,6 +172,7 @@ input:focus-visible {
 }
 
 .info-item:nth-child(2),
+.info-item:nth-child(3),
 .info-item:first-child {
     border-bottom: 1px solid gray;
 }

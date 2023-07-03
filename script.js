@@ -1,5 +1,7 @@
 const linhas = document.querySelectorAll(".linha");
 const camadas = ["K", "L", "M", "N", "O", "P", "Q"];
+const familias = ["1A", "2A", "3B", "4B", "5B", "6B", "7B", "8B","8B", "8B", "1B", "2B", "3A", "4A",  "5A",
+"6A", "7A", "0"];
 const tabelaPeriodica = [
     { nome: "Hidrogênio", simbolo: "H", atomico: 1, massa: 1.008, imagem: "./imgs/hydrogen.jpg" },
     { nome: "Hélio", simbolo: "He", atomico: 2, massa: 4.0026, imagem: "./imgs/helio.jpg" },
@@ -285,15 +287,26 @@ function hover() {
         e.parentNode.addEventListener("mouseenter", () => {
             tabelaPeriodica.forEach(el => {
                 if (el.atomico == number) {
+                    function getPosition(element) {
+                        const parent = element.parentNode;
+                        const children = Array.from(parent.children);
+                        const index = children.indexOf(element);
+                        if(element.classList.contains("lant") || element.classList.contains("act")){
+                            return "";
+                        }
+                        return index;
+                      }
                     let nome = document.querySelector(".tabela-nome");
                     let simbolo = document.querySelector(".tabela-simbolo");
                     let numero = document.querySelector(".tabela-numero");
                     let massa = document.querySelector(".tabela-massa");
+                    let familia = document.querySelector(".tabela-familia");
                     let imagem = document.querySelector(".exemplo");
                     nome.textContent = el.nome;
                     simbolo.textContent = el.simbolo;
                     numero.textContent = el.atomico;
                     massa.textContent = el.massa;
+                    familia.textContent = familias[getPosition(e.parentNode)];
                     imagem.setAttribute("src", el.imagem);
                     if (nome.classList.length > 1) {
                         nome.classList.replace(nome.classList[1], e.parentNode.classList[1]);
